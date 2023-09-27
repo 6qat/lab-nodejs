@@ -1,3 +1,5 @@
+'use strict';
+
 Function.prototype.method = function (name, func) {
     if (!this.prototype[name]) {
         this.prototype[name] = func;
@@ -147,3 +149,21 @@ seqer.set_prefix('Q');
 seqer.set_seq(1000);
 let unique = seqer.gensym();
 console.log(unique);
+
+Function.method('curry', function () {
+        let slice = Array.prototype.slice;
+        let args = slice.apply(arguments);
+        let that = this;
+        return function () {
+            return that.apply(null, args.concat(slice.apply(arguments)));
+        };
+    }
+);
+
+let add = function (a, b) {
+    return a + b;
+}
+
+let add1 = add.curry(1);
+console.log(add1(6));
+
