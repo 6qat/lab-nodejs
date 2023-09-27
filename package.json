@@ -1,0 +1,25 @@
+{
+  "name": "untitled2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "compile": "npx tsc src/index.ts",
+    "start:dev": "npx nodemon",
+    "run-ts1": "node --require ts-node/register src/index.ts",
+    "run-ts2": "ts-node src/index.ts",
+    "build": "npx rimraf ./build && tsc",
+    "start": "npm run build && node build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.7.0",
+    "nodemon": "^3.0.1",
+    "rimraf": "^5.0.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
