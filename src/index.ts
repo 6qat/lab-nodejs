@@ -1,13 +1,13 @@
-import {add, concat, multiply} from './operations';
+import {add, concat, multiply} from './operations.ts';
 
-let i: number = 31;
+const i = 31;
 
 console.log(add(i, 3));
 
-let s = concat('Hello', ' world');
+const s = concat('Hello', ' world');
 
 console.log(s);
 
-let j = multiply(i, 3, 2);
+const j = multiply(i, 3, 2);
 
 console.log(j);

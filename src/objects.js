@@ -22,7 +22,6 @@ let flight = {
 
 let s = stooge["first-name"]
 
-
 if (typeof Object.create !== 'function') {
     Object.create = function (o) {
         function F() {
@@ -43,13 +42,13 @@ another_stooge.nickname = 'Moe';
 stooge.profession = 'actor';
 let profession = another_stooge.profession
 
-typeof flight.number
-typeof flight.airline
-typeof flight.arrival
-typeof flight.manifest
+let tof_number = typeof flight.number
+let tof_airline = typeof flight.airline
+let tof_arrival = typeof flight.arrival
+let tof_manifest = typeof flight.manifest
 
-typeof flight.toString
-typeof flight.constructor
+let tof_toString = typeof flight.toString
+let tof_constructor = typeof flight.constructor
 //
 let hasOwnNumber = flight.hasOwnProperty('number')
 let hasOwnConstructor = flight.hasOwnProperty('constructor')
