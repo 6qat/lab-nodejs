@@ -52,7 +52,7 @@ let getElementsByAttribute = function (att, value) {
             results.push(node);
         }
     });
-
+    
     return results;
 }
 
