@@ -85,12 +85,12 @@ let by = function (name) {
 }
 
 let s = [
-    {first: 'Joe', last: 'Besser'},
-    {first: 'Moe', last: 'Howard'},
-    {first: 'Joe', last: 'DeRita'},
-    {first: 'Shemp', last: 'Howard'},
-    {first: 'Larry', last: 'Fine'},
-    {first: 'Curly', last: 'Howard'}
+    { first: 'Joe', last: 'Besser' },
+    { first: 'Moe', last: 'Howard' },
+    { first: 'Joe', last: 'DeRita' },
+    { first: 'Shemp', last: 'Howard' },
+    { first: 'Larry', last: 'Fine' },
+    { first: 'Curly', last: 'Howard' }
 ];
 console.log(s.sort(by('first')));
 console.log(s.sort(by('last')));
@@ -159,7 +159,7 @@ Function.method(
 
 let x = function () {
     return this.value;
-}.bind({value: 666});
+}.bind({ value: 666 });
 console.log(x());
 console.log("\n");
 
@@ -175,7 +175,7 @@ let bb = Object.create(aa);
 let t = aa.hasOwnProperty('member');
 let u = bb.hasOwnProperty('member');
 let v = bb.member;
-console.log(aa, bb, t, u , v);
+console.log(aa, bb, t, u, v);
 console.log("\n");
 
 

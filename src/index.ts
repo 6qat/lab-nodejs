@@ -2,6 +2,8 @@ import {add, concat, multiply} from './operations.ts';
 
 const i = 31;
 
+let n = 10;
+
 console.log(add(i, 3));
 
 const s = concat('Hello', ' world');

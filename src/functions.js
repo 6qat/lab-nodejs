@@ -8,13 +8,13 @@ Function.prototype.method = function (name, func) {
 };
 
 Number.method('integer', function () {
-        return Math[this < 0 ? 'ceil' : 'floor'](this);
-    }
+    return Math[this < 0 ? 'ceil' : 'floor'](this);
+}
 )
 
 String.method('trim', function () {
-        return this.replace(/^\s+|\s+$/g, '');
-    }
+    return this.replace(/^\s+|\s+$/g, '');
+}
 )
 
 let s = "                 1234    ".trim()
@@ -32,7 +32,9 @@ let hanoi = function (disc, src, aux, dst) {
     }
 }
 
-// hanoi(3, 'Src', 'Aux', 'Dst');
+/**
+ * hanoi(3, 'Src', 'Aux', 'Dst');
+ */
 
 let walk_the_DOM = function walk(node, func) {
     func(node);
@@ -52,7 +54,7 @@ let getElementsByAttribute = function (att, value) {
             results.push(node);
         }
     });
-    
+
     return results;
 }
 
@@ -67,17 +69,17 @@ let factorial = function factorial(i, a) {
 console.log(factorial(4));
 
 let myObject = (function () {
-        let value = 0;
+    let value = 0;
 
-        return {
-            increment: function (inc) {
-                value += typeof inc === 'number' ? inc : 1;
-            },
-            getValue: function () {
-                return value;
-            }
+    return {
+        increment: function (inc) {
+            value += typeof inc === 'number' ? inc : 1;
+        },
+        getValue: function () {
+            return value;
         }
     }
+}
 )();
 
 myObject.increment(2);
@@ -151,13 +153,16 @@ let unique = seqer.gensym();
 console.log(unique);
 
 Function.method('curry', function () {
-        let slice = Array.prototype.slice;
-        let args = slice.apply(arguments);
-        let that = this;
-        return function () {
-            return that.apply(null, args.concat(slice.apply(arguments)));
-        };
-    }
+    let slice = Array.prototype.slice;
+    let args = slice.apply(arguments);
+    let that = this;
+    return function () {
+        /**
+         * return that.apply(null, args.concat(slice.apply(arguments)));
+         */
+        return that(...args.concat(slice.apply(arguments)));
+    };
+}
 );
 
 let add = function (a, b) {
