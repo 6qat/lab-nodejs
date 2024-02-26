@@ -136,3 +136,4 @@ dist
 .pnp.*
 /src/operations.js
 /src/index.js
+pnpm-lock.yaml
